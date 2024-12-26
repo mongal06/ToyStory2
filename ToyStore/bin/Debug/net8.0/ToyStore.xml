@@ -1,0 +1,963 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToyStore</name>
+    </assembly>
+    <members>
+        <member name="M:BankPrikoloff.Controllers.CategoryController.GetAll">
+            <summary>
+            Получение информации о всех категориях
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.CategoryController.GetById(System.Int32)">
+            <summary>
+            Получение информации о категории по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.CategoryController.Add(Contracts.Requests.CreateCategoryRequest)">
+            <summary>
+            Создание новой категории
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /Category
+                {
+                    "categoryName": "Игрушки"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.CategoryController.Update(Contracts.Requests.UpdateCategoryRequest)">
+            <summary>
+            Обновление информации о категории
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Category
+                {
+                    "categoryID": 1,
+                    "categoryName": "Игрушки для детей"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.CategoryController.Delete(System.Int32)">
+            <summary>
+            Удаление категории по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.CustomerOrderController.GetAll">
+            <summary>
+            Получение информации о всех заказах клиентов
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.CustomerOrderController.GetById(System.Int32)">
+            <summary>
+            Получение информации о заказе клиента по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.CustomerOrderController.Add(Contracts.Requests.CreateCustomerOrderRequest)">
+            <summary>
+            Создание нового заказа клиента
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /CustomerOrder
+                {
+                    "customerID": 1,
+                    "orderDate": "2024-01-01T00:00:00",
+                    "totalAmount": 100.50
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.CustomerOrderController.Update(Contracts.Requests.UpdateCustomerOrderRequest)">
+            <summary>
+            Обновление информации о заказе клиента
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /CustomerOrder
+                {
+                    "orderID": 1,
+                    "customerID": 1,
+                    "orderDate": "2024-01-01T00:00:00",
+                    "totalAmount": 100.50
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.CustomerOrderController.Delete(System.Int32)">
+            <summary>
+            Удаление заказа клиента по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ProductController.GetAll">
+            <summary>
+            Получение информации о всех продуктах
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ProductController.GetById(System.Int32)">
+            <summary>
+            Получение информации о продукте по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ProductController.Add(Contracts.Requests.CreateProductRequest)">
+            <summary>
+            Создание нового продукта
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /Product
+                {
+                    "productName": "Мяч",
+                    "categoryID": 1,
+                    "supplierID": 1,
+                    "price": 100,
+                    "stockQuantity": 10
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ProductController.Update(Contracts.Requests.UpdateProductRequest)">
+            <summary>
+            Обновление информации о продукте
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Product
+                {
+                    "productID": 1,
+                    "productName": "Мяч",
+                    "categoryID": 1,
+                    "supplierID": 1,
+                    "price": 100,
+                    "stockQuantity": 10
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ProductController.Delete(System.Int32)">
+            <summary>
+            Удаление продукта по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.DiscountController.GetAll">
+            <summary>
+            Получение информации о всех скидках
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.DiscountController.GetById(System.Int32)">
+            <summary>
+            Получение информации о скидке по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.DiscountController.Add(Contracts.Requests.CreateDiscountRequest)">
+            <summary>
+            Создание новой скидки
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /Discount
+                {
+                    "productID": 1,
+                    "discountPercent": 10.0,
+                    "startDate": "2024-01-01T00:00:00",
+                    "endDate": "2024-12-31T23:59:59"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.DiscountController.Update(Contracts.Requests.UpdateDiscountRequest)">
+            <summary>
+            Обновление информации о скидке
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Discount
+                {
+                    "discountID": 1,
+                    "productID": 1,
+                    "discountPercent": 15.0,
+                    "startDate": "2024-01-01T00:00:00",
+                    "endDate": "2024-12-31T23:59:59"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.DiscountController.Delete(System.Int32)">
+            <summary>
+            Удаление скидки по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.EmployeeController.GetAll">
+            <summary>
+            Получение информации о всех сотрудниках
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.EmployeeController.GetById(System.Int32)">
+            <summary>
+            Получение информации о сотруднике по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.EmployeeController.Add(Contracts.Requests.CreateEmployeeRequest)">
+            <summary>
+            Создание нового сотрудника
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /Employee
+                {
+                    "firstName": "Иван",
+                    "lastName": "Иванов",
+                    "storeID": 1,
+                    "position": "Менеджер",
+                    "hireDate": "2024-01-01T00:00:00"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.EmployeeController.Update(Contracts.Requests.UpdateEmployeeRequest)">
+            <summary>
+            Обновление информации о сотруднике
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Employee
+                {
+                    "employeeID": 1,
+                    "firstName": "Иван",
+                    "lastName": "Иванов",
+                    "storeID": 1,
+                    "position": "Старший менеджер",
+                    "hireDate": "2024-01-01T00:00:00"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.EmployeeController.Delete(System.Int32)">
+            <summary>
+            Удаление сотрудника по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.OrderDetailController.GetAll">
+            <summary>
+            Получение информации о всех деталях заказов
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.OrderDetailController.GetById(System.Int32)">
+            <summary>
+            Получение информации о детали заказа по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.OrderDetailController.Add(Contracts.Requests.CreateOrderDetailRequest)">
+            <summary>
+            Создание новой детали заказа
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /OrderDetail
+                {
+                    "orderID": 1,
+                    "productID": 1,
+                    "quantity": 2,
+                    "unitPrice": 50.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.OrderDetailController.Update(Contracts.Requests.UpdateOrderDetailRequest)">
+            <summary>
+            Обновление информации о детали заказа
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /OrderDetail
+                {
+                    "orderDetailID": 1,
+                    "orderID": 1,
+                    "productID": 1,
+                    "quantity": 3,
+                    "unitPrice": 60.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.OrderDetailController.Delete(System.Int32)">
+            <summary>
+            Удаление детали заказа по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PromotionController.GetAll">
+            <summary>
+            Получение информации о всех акциях
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PromotionController.GetById(System.Int32)">
+            <summary>
+            Получение информации об акции по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PromotionController.Add(Contracts.Requests.CreatePromotionRequest)">
+            <summary>
+            Создание новой акции
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /Promotion
+                {
+                    "promotionName": "Новогодняя распродажа",
+                    "startDate": "2024-12-01T00:00:00",
+                    "endDate": "2024-12-31T23:59:59",
+                    "description": "Скидки на все товары"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PromotionController.Update(Contracts.Requests.UpdatePromotionRequest)">
+            <summary>
+            Обновление информации об акции
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Promotion
+                {
+                    "promotionID": 1,
+                    "promotionName": "Новогодняя распродажа",
+                    "startDate": "2024-12-01T00:00:00",
+                    "endDate": "2024-12-31T23:59:59",
+                    "description": "Скидки на все товары до 50%"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PromotionController.Delete(System.Int32)">
+            <summary>
+            Удаление акции по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PromotionProductController.GetAll">
+            <summary>
+            Получение информации о всех продуктах в акциях
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PromotionProductController.GetById(System.Int32)">
+            <summary>
+            Получение информации о продукте в акции по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PromotionProductController.Add(Contracts.Requests.CreatePromotionProductRequest)">
+            <summary>
+            Создание нового продукта в акции
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /PromotionProduct
+                {
+                    "promotionID": 1,
+                    "productID": 1
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PromotionProductController.Update(Contracts.Requests.UpdatePromotionProductRequest)">
+            <summary>
+            Обновление информации о продукте в акции
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /PromotionProduct
+                {
+                    "promotionProductID": 1,
+                    "promotionID": 1,
+                    "productID": 1
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PromotionProductController.Delete(System.Int32)">
+            <summary>
+            Удаление продукта в акции по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PurchaseController.GetAll">
+            <summary>
+            Получение информации о всех закупках
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PurchaseController.GetById(System.Int32)">
+            <summary>
+            Получение информации о закупке по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PurchaseController.Add(Contracts.Requests.CreatePurchaseRequest)">
+            <summary>
+            Создание новой закупки
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /Purchase
+                {
+                    "supplierID": 1,
+                    "purchaseDate": "2024-01-01T00:00:00",
+                    "totalAmount": 1000.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PurchaseController.Update(Contracts.Requests.UpdatePurchaseRequest)">
+            <summary>
+            Обновление информации о закупке
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Purchase
+                {
+                    "purchaseID": 1,
+                    "supplierID": 1,
+                    "purchaseDate": "2024-01-01T00:00:00",
+                    "totalAmount": 1200.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PurchaseController.Delete(System.Int32)">
+            <summary>
+            Удаление закупки по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PurchaseDetailController.GetAll">
+            <summary>
+            Получение информации о всех деталях закупок
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PurchaseDetailController.GetById(System.Int32)">
+            <summary>
+            Получение информации о детали закупки по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PurchaseDetailController.Add(Contracts.Requests.CreatePurchaseDetailRequest)">
+            <summary>
+            Создание новой детали закупки
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /PurchaseDetail
+                {
+                    "purchaseID": 1,
+                    "productID": 1,
+                    "quantity": 10,
+                    "unitPrice": 50.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PurchaseDetailController.Update(Contracts.Requests.UpdatePurchaseDetailRequest)">
+            <summary>
+            Обновление информации о детали закупки
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /PurchaseDetail
+                {
+                    "purchaseDetailID": 1,
+                    "purchaseID": 1,
+                    "productID": 1,
+                    "quantity": 15,
+                    "unitPrice": 55.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.PurchaseDetailController.Delete(System.Int32)">
+            <summary>
+            Удаление детали закупки по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ReturnController.GetAll">
+            <summary>
+            Получение информации о всех возвратах
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ReturnController.GetById(System.Int32)">
+            <summary>
+            Получение информации о возврате по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ReturnController.Add(Contracts.Requests.CreateReturnRequest)">
+            <summary>
+            Создание нового возврата
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /Return
+                {
+                    "saleID": 1,
+                    "returnDate": "2024-01-01T00:00:00",
+                    "totalAmount": 100.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ReturnController.Update(Contracts.Requests.UpdateReturnRequest)">
+            <summary>
+            Обновление информации о возврате
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Return
+                {
+                    "returnID": 1,
+                    "saleID": 1,
+                    "returnDate": "2024-01-01T00:00:00",
+                    "totalAmount": 120.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ReturnController.Delete(System.Int32)">
+            <summary>
+            Удаление возврата по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ReturnDetailController.GetAll">
+            <summary>
+            Получение информации о всех деталях возвратов
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ReturnDetailController.GetById(System.Int32)">
+            <summary>
+            Получение информации о детали возврата по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ReturnDetailController.Add(Contracts.Requests.CreateReturnDetailRequest)">
+            <summary>
+            Создание новой детали возврата
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /ReturnDetail
+                {
+                    "returnID": 1,
+                    "productID": 1,
+                    "quantity": 2,
+                    "unitPrice": 50.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ReturnDetailController.Update(Contracts.Requests.UpdateReturnDetailRequest)">
+            <summary>
+            Обновление информации о детали возврата
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /ReturnDetail
+                {
+                    "returnDetailID": 1,
+                    "returnID": 1,
+                    "productID": 1,
+                    "quantity": 3,
+                    "unitPrice": 60.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.ReturnDetailController.Delete(System.Int32)">
+            <summary>
+            Удаление детали возврата по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SaleController.GetAll">
+            <summary>
+            Получение информации о всех продажах
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SaleController.GetById(System.Int32)">
+            <summary>
+            Получение информации о продаже по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SaleController.Add(Contracts.Requests.CreateSaleRequest)">
+            <summary>
+            Создание новой продажи
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /Sale
+                {
+                    "storeID": 1,
+                    "saleDate": "2024-01-01T00:00:00",
+                    "totalAmount": 1000.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SaleController.Update(Contracts.Requests.UpdateSaleRequest)">
+            <summary>
+            Обновление информации о продаже
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Sale
+                {
+                    "saleID": 1,
+                    "storeID": 1,
+                    "saleDate": "2024-01-01T00:00:00",
+                    "totalAmount": 1200.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SaleController.Delete(System.Int32)">
+            <summary>
+            Удаление продажи по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SaleDetailController.GetAll">
+            <summary>
+            Получение информации о всех деталях продаж
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SaleDetailController.GetById(System.Int32)">
+            <summary>
+            Получение информации о детали продажи по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SaleDetailController.Add(Contracts.Requests.CreateSaleDetailRequest)">
+            <summary>
+            Создание новой детали продажи
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /SaleDetail
+                {
+                    "saleID": 1,
+                    "productID": 1,
+                    "quantity": 2,
+                    "unitPrice": 50.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SaleDetailController.Update(Contracts.Requests.UpdateSaleDetailRequest)">
+            <summary>
+            Обновление информации о детали продажи
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /SaleDetail
+                {
+                    "saleDetailID": 1,
+                    "saleID": 1,
+                    "productID": 1,
+                    "quantity": 3,
+                    "unitPrice": 60.0
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SaleDetailController.Delete(System.Int32)">
+            <summary>
+            Удаление детали продажи по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.StoreController.GetAll">
+            <summary>
+            Получение информации о всех магазинах
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.StoreController.GetById(System.Int32)">
+            <summary>
+            Получение информации о магазине по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.StoreController.Add(Contracts.Requests.CreateStoreRequest)">
+            <summary>
+            Создание нового магазина
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /Store
+                {
+                    "storeName": "Магазин игрушек",
+                    "address": "ул. Пушкина, д. 10",
+                    "phone": "1234567890"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.StoreController.Update(Contracts.Requests.UpdateStoreRequest)">
+            <summary>
+            Обновление информации о магазине
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Store
+                {
+                    "storeID": 1,
+                    "storeName": "Магазин игрушек",
+                    "address": "ул. Пушкина, д. 10",
+                    "phone": "1234567890"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.StoreController.Delete(System.Int32)">
+            <summary>
+            Удаление магазина по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SupplierController.GetAll">
+            <summary>
+            Получение информации о всех поставщиках
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SupplierController.GetById(System.Int32)">
+            <summary>
+            Получение информации о поставщике по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SupplierController.Add(Contracts.Requests.CreateSupplierRequest)">
+            <summary>
+            Создание нового поставщика
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /Supplier
+                {
+                    "supplierName": "Поставщик игрушек",
+                    "contactName": "Иван Иванов",
+                    "phone": "1234567890",
+                    "email": "supplier@example.com"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SupplierController.Update(Contracts.Requests.UpdateSupplierRequest)">
+            <summary>
+            Обновление информации о поставщике
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Supplier
+                {
+                    "supplierID": 1,
+                    "supplierName": "Поставщик игрушек",
+                    "contactName": "Иван Иванов",
+                    "phone": "1234567890",
+                    "email": "supplier@example.com"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.SupplierController.Delete(System.Int32)">
+            <summary>
+            Удаление поставщика по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.TransactionController.GetAll">
+            <summary>
+            Получение информации о всех транзакциях
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.TransactionController.GetById(System.Int32)">
+            <summary>
+            Получение информации о транзакции по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.TransactionController.Add(Contracts.Requests.CreateTransactionRequest)">
+            <summary>
+            Создание новой транзакции
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /Transaction
+                {
+                    "transactionDate": "2024-01-01T00:00:00",
+                    "transactionType": "Покупка",
+                    "amount": 100.0,
+                    "description": "Покупка игрушек"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.TransactionController.Update(Contracts.Requests.UpdateTransactionRequest)">
+            <summary>
+            Обновление информации о транзакции
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Transaction
+                {
+                    "transactionID": 1,
+                    "transactionDate": "2024-01-01T00:00:00",
+                    "transactionType": "Покупка",
+                    "amount": 120.0,
+                    "description": "Покупка игрушек"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.TransactionController.Delete(System.Int32)">
+            <summary>
+            Удаление транзакции по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.WarehouseController.GetAll">
+            <summary>
+            Получение информации о всех складах
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.WarehouseController.GetById(System.Int32)">
+            <summary>
+            Получение информации о складе по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.WarehouseController.Add(Contracts.Requests.CreateWarehouseRequest)">
+            <summary>
+            Создание нового склада
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /Warehouse
+                {
+                    "warehouseName": "Склад игрушек",
+                    "address": "ул. Ленина, д. 5"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.WarehouseController.Update(Contracts.Requests.UpdateWarehouseRequest)">
+            <summary>
+            Обновление информации о складе
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Warehouse
+                {
+                    "warehouseID": 1,
+                    "warehouseName": "Склад игрушек",
+                    "address": "ул. Ленина, д. 5"
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.WarehouseController.Delete(System.Int32)">
+            <summary>
+            Удаление склада по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.WarehouseStockController.GetAll">
+            <summary>
+            Получение информации о всех запасах на складах
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.WarehouseStockController.GetById(System.Int32)">
+            <summary>
+            Получение информации о запасе на складе по ID
+            </summary>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.WarehouseStockController.Add(Contracts.Requests.CreateWarehouseStockRequest)">
+            <summary>
+            Создание нового запаса на складе
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                POST /WarehouseStock
+                {
+                    "warehouseID": 1,
+                    "productID": 1,
+                    "quantity": 100
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.WarehouseStockController.Update(Contracts.Requests.UpdateWarehouseStockRequest)">
+            <summary>
+            Обновление информации о запасе на складе
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                PUT /WarehouseStock
+                {
+                    "warehouseStockID": 1,
+                    "warehouseID": 1,
+                    "productID": 1,
+                    "quantity": 150
+                }
+            </remarks>
+        </member>
+        <member name="M:BankPrikoloff.Controllers.WarehouseStockController.Delete(System.Int32)">
+            <summary>
+            Удаление запаса на складе по ID
+            </summary>
+        </member>
+        <member name="T:ProductsController">
+            <summary>
+            Контроллер для управления продуктами.
+            </summary>
+        </member>
+        <member name="M:ProductsController.GetProducts">
+            <summary>
+            Получает список всех продуктов.
+            </summary>
+            <returns>Список продуктов.</returns>
+        </member>
+        <member name="M:ProductsController.GetProduct(System.Int32)">
+            <summary>
+            Получает продукт по идентификатору.
+            </summary>
+            <param name="id">Идентификатор продукта.</param>
+            <returns>Продукт.</returns>
+        </member>
+        <member name="M:ProductsController.PostProduct(Contracts.Requests.CreateProductRequest)">
+            <summary>
+            Создает новый продукт.
+            </summary>
+            <param name="request">Данные продукта.</param>
+            <returns>Созданный продукт.</returns>
+            <remarks>
+            Пример запроса:
+            
+                POST /Products
+                {
+                    "productName": "Мяч",
+                    "categoryID": 1,
+                    "supplierID": 1,
+                    "price": 100,
+                    "stockQuantity": 10
+                }
+            </remarks>
+        </member>
+        <member name="M:ProductsController.PutProduct(System.Int32,Contracts.Requests.UpdateProductRequest)">
+            <summary>
+            Обновляет данные продукта.
+            </summary>
+            <param name="id">Идентификатор продукта.</param>
+            <param name="request">Обновленные данные продукта.</param>
+            <returns>Статус выполнения.</returns>
+            <remarks>
+            Пример запроса:
+            
+                PUT /Products/{id}
+                {
+                    "productId": 1,
+                    "productName": "Мяч",
+                    "categoryID": 1,
+                    "supplierID": 1,
+                    "price": 120,
+                    "stockQuantity": 15
+                }
+            </remarks>
+        </member>
+        <member name="M:ProductsController.DeleteProduct(System.Int32)">
+            <summary>
+            Удаляет продукт по идентификатору.
+            </summary>
+            <param name="id">Идентификатор продукта.</param>
+            <returns>Статус выполнения.</returns>
+        </member>
+    </members>
+</doc>

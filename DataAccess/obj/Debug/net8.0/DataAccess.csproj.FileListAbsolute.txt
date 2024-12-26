@@ -1,0 +1,54 @@
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\bin\Debug\net8.0\DataAccess.dll
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.dll
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
+C:\Users\monga\Downloads\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\bin\Debug\net8.0\DataAccess.dll
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\bin\Debug\net8.0\Domain.dll
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\bin\Debug\net8.0\Domain.pdb
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\obj\Debug\net8.0\DataAccess.csproj.Up2Date
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\obj\Debug\net8.0\DataAccess.dll
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\bin\Debug\net8.0\DataAccess.xml
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\bin\Debug\net8.0\Domain.xml
+C:\Users\monga\Downloads\1 гайд\ToyStore — копия\DataAccess\obj\Debug\net8.0\DataAccess.xml
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\bin\Debug\net8.0\DataAccess.dll
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\bin\Debug\net8.0\DataAccess.xml
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\bin\Debug\net8.0\Domain.dll
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\bin\Debug\net8.0\Domain.pdb
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\bin\Debug\net8.0\Domain.xml
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.csproj.Up2Date
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.dll
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.xml
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
+C:\Users\user\Downloads\1 гайд\1 гайд\ToyStore\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
